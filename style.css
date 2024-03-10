@@ -1,0 +1,38 @@
+body{
+    height: 100vh;
+    margin: 0;
+    align-items: center;
+    background-color: #1F2937;
+}
+button:hover{
+    cursor: pointer;
+}
+button {
+    background-color: #3882F6;
+    border: none;
+    color: white;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    padding: 10px 40px;
+    font-weight: 700;
+    font-size: 25px;
+  }
+.header{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding: 1px 120px;
+}
+.title{
+    font-size: 50px;
+    font-weight: 900;
+    margin: 10px;
+    color: white;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+}

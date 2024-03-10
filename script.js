@@ -1,5 +1,6 @@
 let playerScore = 0;
 let computerScore = 0;
+let playerSelection;
 function getComputerChoice() {
   let Bet =  Math.floor(Math.random() * 3);
     if (Bet == 0){
@@ -10,22 +11,17 @@ function getComputerChoice() {
                 return pick = "scissors";
             };
   }
-
-
-  function gameRound(){
-    const playerSelection = prompt("Enter your choice: ");
-    console.log(playerSelection);
-    const pick = getComputerChoice();
-    console.log(pick);
-  if (playerSelection.toLowerCase() === pick){
+  function gameRound(playerSelection, pick){
+    pick = getComputerChoice();
+  if (playerSelection === pick){
 
     return winner = `Tie ${playerSelection} is same as ${pick}
 player score is ${playerScore} to computer score ${computerScore}`
 
 }
-    else if (playerSelection.toLowerCase() === "paper" && pick === "rock" 
-    || playerSelection.toLowerCase() === "rock" && pick === "scissors" 
-    || playerSelection.toLowerCase() === "scissors" && pick === "paper"){
+    else if (playerSelection === "paper" && pick === "rock" 
+    || playerSelection === "rock" && pick === "scissors" 
+    || playerSelection === "scissors" && pick === "paper"){
 
       playerScore += 1;
         return winner = `player wins, ${playerSelection} beats ${pick}
@@ -37,12 +33,38 @@ player score is ${playerScore} to computer score ${computerScore}`
 player score is ${playerScore} to computer score ${computerScore}`}
     }
 
+  const header = document.querySelector("#header");
+  const game = document.querySelector("#game")
 
-function playGame(playerSelection, pick){
+  const rock = document.querySelector("#rock");
+
+  rock.addEventListener('click', () =>{
+    playerSelection = "rock";
+    gameRound(playerSelection);
+    const winnerscore = document.createElement('H3');
+    winnerscore.textContent = winner;
+    game.appendChild(winnerscore);
+
+  })
+
+  const paper = document.querySelector("#paper");
+  paper.addEventListener('click', () =>{
+    playerSelection = "paper";
+    console.log(gameRound(playerSelection));
+  })
+  const scissors = document.querySelector("#scissors");
+  scissors.addEventListener('click', () =>{
+    playerSelection = "scissors";
+    console.log(gameRound(playerSelection));
+  })
+
+
+/*function playGame(){
   for(let i = 0; i < 5; i++){
   gameRound();
   console.log(winner);
   }
+  
   if(playerScore > computerScore){
   return gameWinner = `Congratulations you won!`
   }
@@ -54,4 +76,4 @@ function playGame(playerSelection, pick){
   } 
 
 }
-console.log(playGame());
+console.log(playGame());*/
