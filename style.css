@@ -6,6 +6,7 @@ body{
 }
 button:hover{
     cursor: pointer;
+    color:black;
 }
 button {
     background-color: #3882F6;
@@ -17,12 +18,12 @@ button {
     font-weight: 700;
     font-size: 25px;
   }
-.header{
+#thegame{
     flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 100px;
+    gap: 50px;
     padding: 1px 120px;
 }
 .title{
@@ -31,8 +32,26 @@ button {
     margin: 10px;
     color: white;
 }
-.buttons{
+#info{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+#buttons{
     display: flex;
     justify-content: space-between;
     gap: 70px;
 }
+#score{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    padding: 1px 120px;;
+}
+#choice{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 220px;
+    padding: 1px 120px;;}
