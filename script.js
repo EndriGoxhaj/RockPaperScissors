@@ -41,11 +41,14 @@ function getComputerChoice() {
         player = 0;
         computer = 0;
         winner = "";
+        playerSelection = "";
+        pick = "";
+        winner = "";
         thegame.removeChild(narrator);
         thegame.removeChild(buttons);
         thegame.removeChild(choice);
         thegame.removeChild(score);
-        gamewinner.textContent = "Player wins :( click the button to reset!";
+        gamewinner.textContent = "Player wins click the button to reset!";
         thegame.appendChild(gamewinner);
         thegame.appendChild(reset);
       }
@@ -130,8 +133,8 @@ function getComputerChoice() {
     playerSelection = "rock";
     playgame(gameRound(playerSelection));
 
-    playerpick.textContent = `You chose ${playerSelection}`;
-    computerpick.textContent = `Computer chooses ${pick}`; 
+    playerpick.textContent = `Player choice : ${playerSelection}`;
+    computerpick.textContent = `Computer choice : ${pick}`; 
 
     playerScore.textContent  = `Player score : ${player}`;
     computerScore.textContent = `Computer score : ${computer}`;
