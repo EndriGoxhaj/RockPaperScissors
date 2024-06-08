@@ -44,6 +44,11 @@ function getComputerChoice() {
         playerSelection = "";
         pick = "";
         winner = "";
+        playerpick.textContent = "";
+        computerpick.textContent = "";
+        playerScore.textContent = "";
+        computerScore.textContent = "";
+
         thegame.removeChild(narrator);
         thegame.removeChild(buttons);
         thegame.removeChild(choice);
@@ -208,7 +213,6 @@ function getComputerChoice() {
    
 
   })
-
 
  
  
